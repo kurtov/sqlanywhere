@@ -41,7 +41,7 @@ CREATE TABLE "types" (
   "_real_" REAL DEFAULT NULL
 );
 
-INSERT INTO types VALUES 
+INSERT INTO types VALUES
 ( 0,
   CAST ( 0x78 AS BINARY ),
   1.1,
@@ -64,11 +64,11 @@ INSERT INTO types VALUES
   1.79769313486231e+308,
   3.402823e+38,
   3.402823e+38
-)
+);
 
-INSERT INTO types VALUES 
+INSERT INTO types VALUES
 ( 1,
-  CAST ( 0xFF AS BINARY ), 
+  CAST ( 0xFF AS BINARY ),
   -1.1,
   -1.1,
   '',
@@ -88,5 +88,10 @@ INSERT INTO types VALUES
   NULL,
   -1.79769313486231e+308,
   -3.402823e+38,
-  -3.402823e+38 
-)
+  -3.402823e+38
+);
+
+create or replace procedure test(@param int)
+begin
+    select newid() as a
+end
